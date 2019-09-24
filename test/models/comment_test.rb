@@ -5,16 +5,16 @@ require 'test_helper'
 class CommentTest < ActiveSupport::TestCase
   def setup
     @comment = Comment.create(comment: 'bodybodybodybody')
-    get_user_id
-    get_post_id
+    user_id
+    post_id
   end
 
-  def get_user_id
+  def user_id
     @user = User.create(name: 'amanda', email: 'amanda@email.com')
     @comment.user_id = @user.id
   end
 
-  def get_post_id
+  def post_id
     @post = Post.create(title: 'Title', body: 'bodycombodybody')
     @post.user_id = @user.id
     @comment.post_id = @post.id

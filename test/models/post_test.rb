@@ -5,10 +5,10 @@ require 'test_helper'
 class PostTest < ActiveSupport::TestCase
   def setup
     @post = Post.new(title: 'Title', body: 'bodybodybodybody')
-    get_user_id
+    user_id
   end
 
-  def get_user_id
+  def user_id
     @user = User.create(name: 'amanda', email: 'amanda@email.com')
     @post.user_id = @user.id
   end
