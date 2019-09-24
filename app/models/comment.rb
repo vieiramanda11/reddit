@@ -1,5 +1,5 @@
 class Comment < ApplicationRecord
     belongs_to :user
     belongs_to :post
-    validates :comment, presence:true, length: {in: 1..250}
+    validates :comment, presence:true, length: {in: 5..250}
 end
